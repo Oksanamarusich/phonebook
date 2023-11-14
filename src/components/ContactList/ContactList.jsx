@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { deleteContacts } from 'redux/operations';
-import { selectVisibleContacts } from 'redux/selectors';
+import { deleteContacts } from 'redux/contacts/operations';
+import { selectVisibleContacts } from 'redux/contacts/selectors';
 
 import { FaTrashAlt } from "react-icons/fa";
 import {
