@@ -12,7 +12,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   //background-color: #fffed5;
  // background: linear-gradient(to bottom right, #00ff00, #800080);
-  background: linear-gradient(to bottom right, rgba(0,255,0,0.5), rgba(128,0,128,0.5));
+  //background: linear-gradient(to bottom right, rgba(0,255,0,0.5), rgba(128,0,128,0.5));
 }
 
 code {
