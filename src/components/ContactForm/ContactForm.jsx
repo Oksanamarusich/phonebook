@@ -43,28 +43,28 @@ export const ContactForm = () => {
     actions.resetForm();
   };
 
-   return <Container>
-     <Formik
-    initialValues={{
-      name: '',
-      number: '',
+  return <Container>
+    <Formik
+      initialValues={{
+        name: '',
+        number: '',
       
       }}
-    validationSchema={FormSchema}
+      validationSchema={FormSchema}
       onSubmit={onSubmitForm}
     >
       <StyledForm>
         
         <Label>
-           Name
+          Name
           <StyledField name="name" />
-          <Error name ="name" component ="div"/>
+          <Error name="name" component="div" />
         </Label>
         
         <Label>
           Number
           <StyledField type="tel" name="number" />
-          <Error name ="number" component ="div"/>
+          <Error name="number" component="div" />
         </Label>
         
         <Button type="submit"><FaUserPlus /> Add contacts</Button>
@@ -73,7 +73,7 @@ export const ContactForm = () => {
   
 
   </Container>
-}
+};
 
 
 
