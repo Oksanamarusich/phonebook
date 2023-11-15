@@ -1,18 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { App } from 'components/App';
-import { ThemeProvider } from 'styled-components';
+//import { ThemeProvider } from 'styled-components';
 import { GlobalStyle } from './components/GlobalStyle';
 import { Provider } from 'react-redux';
 import { store, persistor } from 'redux/store';
 import { PersistGate } from 'redux-persist/integration/react';
 import { BrowserRouter } from 'react-router-dom';
+import { ChakraProvider } from '@chakra-ui/react'
 
 
 const theme = {
   colors: {
     gray: '#D3D3D3',
-    light: '#f2f2f2',
+    light: '#D3D3D3',
     dark: '#808080',
     error: '#D21404',
   },
@@ -29,10 +30,10 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
        <BrowserRouter basename="goit-react-hw-08-phonebook">
-          <ThemeProvider theme={theme}>
+          <ChakraProvider >
             <App />
             <GlobalStyle/>
-           </ThemeProvider>
+           </ChakraProvider>
         </BrowserRouter>
       </PersistGate>
      
