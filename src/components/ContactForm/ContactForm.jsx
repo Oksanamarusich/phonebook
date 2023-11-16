@@ -4,6 +4,7 @@ import { selectContacts } from 'redux/contacts/selectors';
 import { addContacts } from 'redux/contacts/operations';
 import * as Yup from 'yup';
 import { FaUserPlus } from "react-icons/fa";
+import toast from 'react-hot-toast';
 
 
 import { Container,StyledForm,  Label, Error, StyledField, Button } from "./ContactForm.styled";
@@ -35,7 +36,8 @@ export const ContactForm = () => {
       contact.number.trim() === payload.number.trim()).length;
      
     if (nameContact || numberContact) {
-      alert(`${payload.name}: is already in contacts`)
+      // alert(`${payload.name}: is already in contacts`)
+      toast.success(`${payload.name}: is already in contacts`)
       actions.resetForm();
       return;
     };

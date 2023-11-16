@@ -7,12 +7,18 @@ import { Route, Routes } from 'react-router-dom';
 import { Layout } from './Layout';
 import { PrivateRoute } from './PrivateRoute';
 import { RestrictedRoute } from './RestrictedRoute';
+import styled from "styled-components";
 
-const HomePage = lazy(() => import('../pages/Home'));
+const HomePage = lazy(() => import('../pages/Home/Home'));
 const RegisterPage = lazy(() => import('../pages/Register'));
 const LoginPage = lazy(() => import('../pages/Login'));
 const ContactsPage = lazy(() => import('../pages/Contacts'));
 
+const Text = styled.b`
+  color:  ${prop => prop.theme.colors.accent};
+  font-size: 20px;
+
+`;
 
 export const App = () => {
   const dispatch = useDispatch();
@@ -25,7 +31,7 @@ export const App = () => {
   }, [dispatch]);
 
   return isRefreshing ? (
-    <b>Refreshing user...</b>
+    <Text>Refreshing user...</Text>
   ) : (
       <Routes>
         <Route path="/" element={<Layout />}>

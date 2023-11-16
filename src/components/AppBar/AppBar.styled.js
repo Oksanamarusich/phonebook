@@ -4,5 +4,8 @@ export const Header = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #2a363b;
+ max-width: 100%;
+ padding: 20px 60px;
+  
+
 `;

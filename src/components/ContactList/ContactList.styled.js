@@ -8,18 +8,17 @@ padding-top: 20px;
   margin-bottom: 20px;
 
 width: 400px;
-`
+`;
 export const List = styled.ul`
 list-style: none;
 padding-left:0;
 
-`
+`;
 
 export const ListItem = styled.li`
 display: flex;
 gap: 10px;
 margin-bottom: 10px;
-
 color: ${prop => prop.theme.colors.light};
 `;
 
@@ -28,15 +27,14 @@ display: flex;
 justify-content: center;
 align-items: center;
 border: transparent;
-background-color:  ${prop => prop.theme.colors.light};
-border-radius: 4px;
+background-color:  ${prop => prop.theme.colors.dark};
 width: 30px;
 height: 30px;
 cursor:pointer;
 
  &:hover{
-  border:0;
-  box-shadow: ${props => props.theme.shadows.regular};
+  background-color:  ${prop => prop.theme.colors.light};
+border-radius: 4px;
  }
 `;
 export const ContainerButtons = styled.div`
@@ -53,7 +51,7 @@ border-radius:4px;
 align-items: center;
 &:hover{
   border:0;
-  box-shadow: ${props => props.theme.shadows.regular};
+  
   background-color: ${prop => prop.theme.colors.light};
   color:${prop => prop.theme.colors.dark};
   }
