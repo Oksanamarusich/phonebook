@@ -1,10 +1,11 @@
+
+
+
 export default function Home() {
-  return (
-    <div>
-      <h1 >
-         Welcome page{' '}
-        
-      </h1>
-    </div>
-  );
+  return <div>
+    
+      <h1>Phonebook welcome page</h1>
+  
+  </div>
+  
 };

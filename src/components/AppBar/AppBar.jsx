@@ -5,6 +5,7 @@ import { UserMenu } from '../UserMenu/UserMenu';
 
 import { Header } from './AppBar.styled';
 
+
  export const AppBar = () => {
   const { isLoggedIn } = useAuth();
 

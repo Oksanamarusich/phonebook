@@ -5,7 +5,8 @@ import { addContacts } from 'redux/contacts/operations';
 import * as Yup from 'yup';
 import { FaUserPlus } from "react-icons/fa";
 
-import { Container,StyledForm, StyledField, Button, Label, Error } from "./ContactForm.styled";
+
+import { Container,StyledForm,  Label, Error, StyledField, Button } from "./ContactForm.styled";
 
  const FormSchema = Yup.object().shape({
    name:  Yup.string()

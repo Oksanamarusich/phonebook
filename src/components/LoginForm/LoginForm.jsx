@@ -3,6 +3,7 @@ import * as yup from 'yup';
 import { useDispatch } from "react-redux";
 import { logIn } from 'redux/auth/operations';
 
+
 const FormSchema = yup.object().shape({
     email: yup.string()
           .email()
@@ -19,15 +20,17 @@ export const LoginForm = () => {
     const initialValues = {
         email: '',
         password: '',
+    
     };
     
     const handleSubmit = (values, actions) => {
         console.log(values);
-        console.log(actions)
+        console.log(actions);
         const payload = {
-             email: values.email,
-             password: values.password,
-         };
+            email: values.email,
+            password: values.password,
+             
+        };
         dispatch(logIn(payload));
         actions.resetForm();
     };
@@ -36,24 +39,24 @@ export const LoginForm = () => {
         <Formik
             initialValues={initialValues}
             onSubmit={handleSubmit}
-             validationSchema={FormSchema}>
-            <Form autoComplete= "off">
+            validationSchema={FormSchema}>
+            <Form autoComplete="off">
                 <label>
-                Email
+                    Email
                     <Field type="email" name="email" />
                     <ErrorMessage name="email" component="div" />
-            </label>
-            <label>
-                Password
+                </label>
+                <label>
+                    Password
                     <Field type="password" name="password" />
                     <ErrorMessage name="password" component="div" />
-            </label>
-            <button type ="submit">Log In</button>
+                </label>
+                   <button button type="submit">Log In</button>
             </Form>
-            
         </Formik>
+         
     </div>
-}
+};
 
 
 
