@@ -20,5 +20,5 @@ border:none;
 border-bottom: 1px solid ${prop => prop.theme.colors.gray};
 outline: 0;
 background-color:  ${prop => prop.theme.colors.dark};
-
+color: ${prop => prop.theme.colors.accent};
 `;

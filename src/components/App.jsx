@@ -14,7 +14,7 @@ const RegisterPage = lazy(() => import('../pages/Register'));
 const LoginPage = lazy(() => import('../pages/Login'));
 const ContactsPage = lazy(() => import('../pages/Contacts'));
 
-const Text = styled.b`
+export const Text = styled.b`
   color:  ${prop => prop.theme.colors.accent};
   font-size: 20px;
 
@@ -24,8 +24,7 @@ export const App = () => {
   const dispatch = useDispatch();
   const { isRefreshing } = useAuth();
  
-
-  useEffect(() => {
+ useEffect(() => {
     dispatch(refreshUser());
 
   }, [dispatch]);
@@ -60,17 +59,7 @@ export const App = () => {
   );
 };
 
-//   return (<div>
-//      <h1>Phonebook</h1>
-//     <ContactForm />
-//     {error && (<ErrorMessage>Whoops! Error! Please reload this page!</ErrorMessage>)}  
-//     <h2>Contacts</h2>
-//     <Filter />
-//     {isLoading && !error && <Loader />} 
-//     <ContactList />
-//   </div>
-//   );
-// };
+
 
 
 

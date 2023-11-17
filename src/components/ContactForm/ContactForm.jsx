@@ -5,8 +5,6 @@ import { addContacts } from 'redux/contacts/operations';
 import * as Yup from 'yup';
 import { FaUserPlus } from "react-icons/fa";
 import toast from 'react-hot-toast';
-
-
 import { Container,StyledForm,  Label, Error, StyledField, Button } from "./ContactForm.styled";
 
  const FormSchema = Yup.object().shape({

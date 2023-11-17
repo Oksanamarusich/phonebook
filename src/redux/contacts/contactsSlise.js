@@ -19,7 +19,7 @@ const handelRejected = (state, action) => {
 const handelFulfilledAddContacts = (state, action) => {
     state.isLoading = false;
     state.error = null;
-    state.contacts = [...state.contacts, action.payload];
+     state.contacts = [...state.contacts, action.payload];
 };
 
 const handelFulfilledDeleteContacts = (state, action) => {

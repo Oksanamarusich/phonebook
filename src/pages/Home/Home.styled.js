@@ -1,8 +1,10 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-margin:50px auto;
-padding: 30px 200px 80px 500px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
 background-color:${prop => prop.theme.colors.dark};
 `;
 
@@ -15,11 +17,15 @@ export const Title = styled.h1`
     color:${prop => prop.theme.colors.accent};
 `;
 
+export const Description = styled.div`
+display: flex;
+flex-direction: column;
+margin-left: 115px;
+`;
+
 export const Text = styled.p`
-    //margin-left: 100px;
     font-weight: 600;
     font-size: 20px;
     line-height: 1.16;
-    
     color:${prop => prop.theme.colors.accent};
 `;

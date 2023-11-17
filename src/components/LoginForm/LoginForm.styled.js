@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 import { Form, Field, ErrorMessage } from 'formik';
+
 export const Container = styled.div`
 padding: 80px 40px;
-margin: 80px auto;
+margin: 0 auto;
 width: 400px;
 height: 450px;
 background-color:${prop => prop.theme.colors.light}; 
