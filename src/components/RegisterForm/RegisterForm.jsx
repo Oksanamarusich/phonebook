@@ -27,8 +27,6 @@ export const RegisterForm = () => {
     };
 
     const handleSubmit = (values, actions) => {
-        console.log('formRegister', values)
-        console.log('formRegister', actions)
         const payload = {
              name: values.name,
              email: values.email,

@@ -24,12 +24,9 @@ export const LoginForm = () => {
     };
     
     const handleSubmit = (values, actions) => {
-        console.log(values);
-        console.log(actions);
         const payload = {
             email: values.email,
             password: values.password,
-             
         };
         dispatch(logIn(payload));
         actions.resetForm();
