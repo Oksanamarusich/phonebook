@@ -15,6 +15,8 @@ const LoginPage = lazy(() => import('../pages/Login'));
 const ContactsPage = lazy(() => import('../pages/Contacts'));
 
 export const Text = styled.b`
+display: block;
+margin: 50px 300px;
   color:  ${prop => prop.theme.colors.accent};
   font-size: 20px;
 
@@ -30,7 +32,7 @@ export const App = () => {
   }, [dispatch]);
 
   return isRefreshing ? (
-    <Text>Refreshing user...</Text>
+     <Text>Refreshing user...</Text>
   ) : (
       <Routes>
         <Route path="/" element={<Layout />}>

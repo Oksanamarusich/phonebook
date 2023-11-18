@@ -6,7 +6,7 @@ import { Helmet } from 'react-helmet';
 import { ContactForm } from 'components/ContactForm/ContactForm.jsx';
 import { Filter } from 'components/Filter/Filter';
 import { ContactList } from 'components/ContactList/ContactList';
-import { Text } from 'components/App.jsx';
+import { Loader } from 'components/Loader/Loader';
 
 export default function Contacts() {
  const dispatch = useDispatch();
@@ -23,7 +23,8 @@ export default function Contacts() {
             </Helmet>
             <ContactForm />
             <Filter />
-             <Text>{isLoading && 'Request in progress...'}</Text>
+            {isLoading && <Loader/>}
+             {/* <Text>{isLoading && 'Request in progress...'}</Text> */}
             <ContactList/>
         </>
     )

@@ -13,7 +13,7 @@ const FormSchema = yup.object().shape({
         .required('This field is required'),
     password: yup.string()
          .min(8, 'Password is too short - should be 8 chars minimum.')
-        // .matches(/[a-zA-Z]/, 'Password can only contain Latin letters.')
+         .matches(/[a-zA-Z]/, 'Password can only contain Latin letters.')
         .required('This field is required'),
   
  });
